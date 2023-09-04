@@ -63,3 +63,97 @@ while (validator!=True):
         validator=True
     else:
         print("Intente otra vez")
+
+# %% Ejercicio 10
+number=int(input("Ingrese un numero entero."))
+for i in range(2,number):
+    if (number%i) == 0:
+        print(f"El numero {number} no es primo")
+        break
+    else:
+        print(f"El numero {number} es primo")
+        break
+
+# %% Ejercicio 11
+word=input("Ingrese una palabra o frase")
+for i in range(len(word)-1, -1, -1):
+    print(word[i])
+
+# %% Ejercicio 12
+word=input("Ingrese una palabra o frase")
+letter=input("Ingrese la letra a buscar")
+aux=0
+for i in word:
+    if i==letter:
+        aux+=1
+print(f"Hay {aux} {letter} en total.")
+
+# %% Ejercicio 13
+validator=bool(False)
+while validator!=True:
+    word=input("Ingrese palabra a repetir")
+    if word!="salir":
+        print(word)
+    else:
+        validator=True
+
+# %% Ejercicio 14
+number1=int(input("Ingrese el primer numero"))
+number2=int(input("Ingrese el segundo numero"))
+if (number1%2==0):
+    print(f"El numero {number1} es par")
+else:
+    print(f"El numero {number1} es impar")
+if (number2%2==0):
+    print(f"El numero {number2} es par")
+else:
+    print(f"El numero {number2} es impar")
+# %% Ejercicio 15
+validator=bool(False)
+while validator!=True:
+    number=int(input("Ingrese un numero mayor a 0"))
+    if number>0:
+        print("Los divisores de el numero ingresado son:")
+        for i in range(1, number + 1):
+            if number % i == 0:
+                print(i)
+        validator=True
+# %% Ejercicio 16
+cant=int(input("Especifique cuantos numeros seran ingresados"))
+neg=0
+for i in range(0, cant):
+    number=int(input(f"Ingrese el numero {i+1}"))
+    if number<0:
+        neg+=1
+print(f"Se ingresaron {neg} numeros negativos.")
+# %% Ejercicio 17
+phrase=input("Ingrese una frase").lower()
+vowels=[]
+vowels_list=["a", "e", "i", "o", "u"]
+for i in phrase:
+    if i in vowels_list and i not in vowels:
+        vowels.append(i)
+if vowels:
+    print("Las vocales encontradas son:")
+    for i in vowels:
+        print(i, end=" ")
+# %% Ejercicio 18
+num1, num2= 0,1
+count=0
+while count<=10:
+    print(num1, end=" ")
+    num1,num2=num2,num1+num2
+    count+=1
+
+# %% Ejercicio 19
+goal=int(input("Ingrese el objetivo: "))
+saving=0
+while saving<goal:
+    aux=int(input("Ingrese el ahorro de hoy."))
+    if aux>0:
+        saving+=aux
+    else:
+        print("El valor debe ser positivo!")
+print("Se completo el objetivo.")
+# %% Ejercicio 20
+
