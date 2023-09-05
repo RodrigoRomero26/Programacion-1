@@ -156,4 +156,67 @@ while saving<goal:
         print("El valor debe ser positivo!")
 print("Se completo el objetivo.")
 # %% Ejercicio 20
+num=1
+num2=0
+while num != 0:
+    num=int(input("Ingrese un numero (salir con 0): "))
+    num2+=num
+print(f"La suma de los numeros es: {num2}")
 
+# %% Ejercicio 21
+num=1
+top=0
+while num != 0:
+    num=int(input("Ingrese un numero (salir con 0): "))
+    if(num > top):
+        top = num
+
+# %% Ejercicio 22
+num=0
+count=0
+while num != -1:
+    num=int(input("Ingrese un número entero positivo (-1 para salir): "))
+    add=0
+    num2=num
+    while num2 > 0:
+        digit=num2 % 10
+        add+=digit
+        num2 //= 10
+    print(f"La suma es {add}")
+    if num % 2 == 0:
+        count += 1
+print(f"Total de números pares ingresados: {count}")
+
+# %% Ejercicio 23
+num=1
+tot=0
+while num != 0:
+    num=int(input("Ingrese los montos de los productos (0 para salir): "))
+    tot+=num
+print(f"El monto total es: {tot}")
+
+# %% Ejercicio 24
+tot= 0
+num = int(input("Ingrese los montos de los productos (0 para salir): "))
+while num!=0:
+    if num<0:
+        print("Ingreso un monto negativo, intente nuevamente. ")
+    else:
+        tot+=num
+    num=int(input("Ingrese los montos de los productos (0 para salir): "))
+if tot>1000:
+    pay =tot-(tot*0.10)
+    print(f"El total a pagar, con descuento, es de {pay}.")
+else:
+    print(f"El total a pagar es: {tot}")
+# %% Ejercicio 25
+num=int(input("Ingrese un número entero: "))
+if num<0:
+    print("Ingreso un numero negativo.")
+elif num==0:
+    print("El factorial de 0 es 1.")
+else:
+    factorial=1
+    for i in range(1, num + 1):
+        factorial=i
+    print(f"El factorial de {num} es {factorial}.")
