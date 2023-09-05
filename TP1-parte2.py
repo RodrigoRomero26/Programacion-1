@@ -105,7 +105,7 @@ año=input("Ingrese su año de nacimiento (AAAA): ")
 print(f"Fecha de nacimiento: {dia}/{mes}/{año}")
 # %% Ejercicio 20
 fecha=input("Ingrese su fecha de nacimiento DDMMAAAA")
-print(f"Fecha de nacimiento: {fecha}")
+print(f"Fecha de nacimiento: {fecha[0:2]}/{fecha[2:4]}/{fecha[4:]}")
 # %% Ejercicio 21
 km_por_litro=float(input("Cuantos kilometros puede recorrer con un litro de combustible: "))
 capacidad_tanque=float(input("Que capacidad de litros tiene el tanque: "))
