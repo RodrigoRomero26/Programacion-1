@@ -62,5 +62,44 @@ else:
             if i%10==0:
                 print(f"El año {i} es bisiesto y multiplo de 10")
 
+# %% Ejercicio 5
+for i in range(1, 21):
+    if i%2==0:
+        print(i, end=" ")
+    else:
+        continue
 
+# %% Ejercicio 6
+import random
+list_1=[]
+size=int(input("Ingrese el tamaño de la lista"))
+for i in range(0, size-1):
+    list_1.append(random.randint(0,10))
+num_find=int(input("Ingrese el numero a buscar."))
+for j in list_1:
+    if j == num_find:
+        print(f"Numero {num_find} encontrado.")
+        break
+
+# %% Ejercicio 7
+option=1
+import time
+while True:
+    option=int(input("Ingrese una opcion.\n 1.Compras \n 2.Ventas \n 3.Consultas \n 0.Salir"))
+    if option==1:
+        print("Seleccionó Compras, comuniquese con compras@empr.com")
+        time.sleep(3)
+    elif option==2:
+        print("Seleccionó Ventas, comuniquese con ventas@empr.com")
+        time.sleep(3)
+    elif option==3:
+        print("Seleccionó Consultas, comuniquese con atencionalcliente@empr.com")
+        time.sleep(3)
+    elif option==0:
+        print("Esperamos que vuelva pronto.")
+        time.sleep(3)
+        break
+    else:
+        print("Ingreso una opcion incorrecta, intente otra vez.")
+        time.sleep(3)
 # %%
