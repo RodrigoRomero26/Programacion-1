@@ -32,4 +32,35 @@ while True:
         else:
             print("No se ingreso R o D, intente otra vez.")
 print(account)
+# %% Ejercicio 3
+prime_num=0
+while True:
+    number=int(input("Ingrese un numero mayor a 1 "))
+    if number>1:
+        for i in range(2, number):
+            if number % i == 0:
+                break
+            else:
+                prime_num+=1
+                break
+    elif number==0:
+        break
+print(f"Se ingresaron {prime_num} numeros primos")
+
+# %% Ejercicio 4
+year=int(input("Ingrese el primer año"))
+year1=int(input("Ingrese el segundo año"))
+if year > year1:
+    for i in range(year1,year):
+        if ((i%4==0) and (i%100!=0)) or i%400==0:
+            if i%10==0:
+                print(f"El año {i} es bisiesto y multiplo de 10")
+                print(" ")
+else:
+    for i in range(year,year1):
+        if ((i%4==0) and (i%100!=0)) or i%400==0:
+            if i%10==0:
+                print(f"El año {i} es bisiesto y multiplo de 10")
+
+
 # %%
