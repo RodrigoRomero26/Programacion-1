@@ -161,7 +161,7 @@ numero2 = int(input("Ingrese otro numero. "))
 print("1. Suma")
 print("2. Multiplicacion")
 print("3. Resta")
-print("4. Divicion")
+print("4. Division")
 op = int(input("Ingrese el numero de la operacion que desea hacer."))
 if(op==1):
     suma = (numero1 + numero2)
@@ -173,8 +173,11 @@ elif(op==3):
     rest = (numero1 - numero2)
     print(f"{rest}")
 elif(op==4):
-    divi = (numero1 / numero2)
-    print(f"{divi}")
+    if (numero1==0 or numero2==0):
+        print("0")
+    else:
+        divi = (numero1 / numero2)
+        print(f"{divi}")
 
 # %% Ejercicio 17
 dia = str(input("Ingrese un dia de la semana")).lower()
@@ -193,8 +196,9 @@ if(horas > 48):
     hs_extra=horas-48
     print(f"Trabajo {hs_extra} horas extra.")
     tot=sal*48+sal+((sal*0.10)*hs_extra)
-    print(f"Este mes cobro {tot} de salario.")
-
+    print(f"Este mes se realizaron horas extras.\nSe cobro {tot} de salario.")
+else:
+    print(f"Este mes no se realizaron horas extras.\nSe cobro {horas*sal}")
 # %% Ejercicio 19
 lapiz = int(input("Cuantas lapices se va a llevar?"))
 if(lapiz>= 1000):
