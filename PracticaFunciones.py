@@ -7,4 +7,3 @@ while num!=0:
     num = int(input("Ingrese el numero: "))
     aux+=num
 print(f"El total es {aux} y la suma de sus digitos es {funciones.add_digits(aux)}")
-# %%
