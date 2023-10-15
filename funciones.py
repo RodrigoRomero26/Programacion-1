@@ -124,3 +124,34 @@ def factorial (num):
 def digitcount (num, digit):
     aux = str(num).count(str(digit))
     return aux
+
+def listmaker (list, cond):
+    while True:
+        name = input(f"Ingrese su dato. Ingrese {cond} para terminar.").title()
+        if name==cond:
+            return list
+        else:
+            list.append(name)
+
+def listmakenoreps(list):
+    listnorep = []
+    for i in list:
+        conf = any(i == name for name in listnorep)
+        if not conf:
+            listnorep.append(i)
+    return listnorep
+
+def listshow(list):
+    for name in list:
+        print(name, end=", ")
+    print(" ")
+
+def showreps(list1, list2):
+    set1 = set(list1)
+    set2 = set(list2)
+    return set1 & set2
+
+def shownoreps(list1, list2):
+    set1 = set(list1)
+    set2 = set(list2)
+    return set1 - set2
