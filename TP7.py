@@ -97,7 +97,6 @@ for i in range(20):
     numbers.append(random.randint(0,60))
 for i in counting_sort(numbers):
     print(i, end=", ")
-
 # %% Ejercicio 7
 mixed_list = [1, "dos", 3, "cuatro", 5, "seis", 7, "ocho", 9, "diez"]
 numbers = [x for x in mixed_list if isinstance(x, int)]
