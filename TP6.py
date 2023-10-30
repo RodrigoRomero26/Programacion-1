@@ -89,7 +89,67 @@ for i in range(len(goals)):
         totalgoals += (goals[i][j] - goals[j][i])
     print(f"El equipo {i+1} tuvo {wins} victorias, {tie} empates y {lose} derrotas. La diferencia total de goles es de {totalgoals}. Y obtuvo {(wins*3+tie)} puntos.")
 # %% Ejercicio 9
+import random
 
+board = []
+hide = ["A", "B", "C", "D", "E", "F", "A", "B", "C", "D", "E", "F"]
+random.shuffle(hide)
+
+for i in range(3):
+    row = hide[i * 4: (i + 1) * 4]
+    board.append(row)
+
+opened = [['[ ]'] * 4 for _ in range(3)]
+found = 0
+
+while found < 6:
+    for i in range(3):
+        for j in range(4):
+            print(opened[i][j], end=" ")
+        print("")
+
+    row = int(input("Ingrese la fila de la primer carta (1-3):") )- 1
+    col = int(input("Ingrese la columna de la primer carta (1-4):")) - 1
+
+    if not (0 <= row <= 2 and 0 <= col <= 3):
+        print("Ingreso mal. Intente otra vez.")
+        continue
+
+    if opened[row][col] != '[ ]':
+        print("La carta ya está abierta. Elija otra.")
+        continue
+
+    opened[row][col] = board[row][col]
+    for i in range(3):
+        for j in range(4):
+            print(opened[i][j], end=" ")
+        print("")
+    row2 = int(input("Ingrese la fila de la segunda carta (1-3):")) - 1
+    col2 = int(input("Ingrese la columna de la segunda carta (1-4):")) - 1
+
+    if not (0 <= row2 <= 2 and 0 <= col2 <= 3):
+        print("Ingreso mal. Intente otra vez.")
+        continue
+
+    if opened[row2][col2] != '[ ]':
+        print("La carta ya está abierta. Elija otra.")
+        continue
+
+    opened[row2][col2] = board[row2][col2]
+    for i in range(3):
+        for j in range(4):
+            print(opened[i][j], end=" ")
+        print("")
+
+    if opened[row][col] == opened[row2][col2] and (row != row2 or col != col2):
+        found += 1
+        print("¡Muy bien!")
+    else:
+        print("Te equivocaste. Inténtalo otra vez.")
+        opened[row][col] = '[ ]'
+        opened[row2][col2] = '[ ]'
+
+print("¡Encontraste todas las parejas. Ganaste!")
 
 
 # %% Ejercicio 10
