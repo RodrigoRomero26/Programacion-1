@@ -1,5 +1,5 @@
 # %% Ejercicio 1
-"""from Persona import Persona
+from Persona import Persona
 myperson = Persona()
 myperson.name = input("Ingresa el name")
 myperson.age = input("Ingresa la edad")
@@ -9,7 +9,7 @@ if myperson.esMayorDeEdad():
     print("La persona es mayor de edad.")
 else:
     print("La persona es menor de edad.")
-"""
+
 # %% Ejercicio 2
 from Cuenta import Cuenta
 myaccount = Cuenta()
